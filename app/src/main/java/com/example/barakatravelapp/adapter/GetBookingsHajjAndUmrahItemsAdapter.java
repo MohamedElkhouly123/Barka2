@@ -78,7 +78,7 @@ public class GetBookingsHajjAndUmrahItemsAdapter extends RecyclerView.Adapter<Ge
         holder.cardviewGeneralVertBookingHajjAndHotelsItemPackageNameTv.setText("Package Name : " + getTopUmarAndTophajjPackageData.getUmar().getName());
         holder.cardviewGeneralVertBookingHajjAndHotelsItemDepartureDateTv.setText("Departure Date : " + getHajjAndUmraItemsListData.get(position).getDepartureDate());
         holder.cardviewGeneralVertBookingHajjAndHotelsItemReturnDateTv.setText("Return Date : " + getHajjAndUmraItemsListData.get(position).getReturnDate());
-        holder.cardviewGeneralVertBookingHajjAndHotelsItemTotalPriceTv.setText("Total : $" + getHajjAndUmraItemsListData.get(position).getTotalPrice());
+        holder.cardviewGeneralVertBookingHajjAndHotelsItemTotalPriceTv.setText("Total : $ " + getHajjAndUmraItemsListData.get(position).getTotalPrice());
         holder.cardviewGeneralVertBookingHajjAndHotelsItemCommentTv.setText("Comment : " + getHajjAndUmraItemsListData.get(position).getPriefTravel());
         String status = getHajjAndUmraItemsListData.get(position).getStatus();
          visaOrCash = getHajjAndUmraItemsListData.get(position).getPaymentType();
@@ -88,7 +88,7 @@ public class GetBookingsHajjAndUmrahItemsAdapter extends RecyclerView.Adapter<Ge
 //            holder.cardviewBookEVisaOffersItemStatusLy.setBackgroundResource(R.drawable.circle_btn_yello_shape);
             holder.cardviewBookEVisaOffersItemCompletePaymentBtn.setVisibility(View.VISIBLE);
             if (!visaOrCash.equalsIgnoreCase("Visa")) {
-                holder.cardviewBookEVisaOffersItemCompletePaymentBtn.setText("Contact with Management");
+                holder.cardviewBookEVisaOffersItemCompletePaymentBtn.setText("Pay By Check");
             }
             holder.cardviewGeneralVertBookingHajjAndHotelsItemStatusTv.setText("Pending");
 
@@ -128,6 +128,22 @@ public class GetBookingsHajjAndUmrahItemsAdapter extends RecyclerView.Adapter<Ge
                     activity.startActivity(i);
                 }
             }
+                if (!visaOrCash.equalsIgnoreCase("Visa")) {
+
+                    String url = "https://orderpoint.deluxe.com/personal-checks/welcome.htm?locid=SD:GBL_2_OP_personal-checks";
+                    try {
+                        Intent i = new Intent("android.intent.action.MAIN");
+                        i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                        i.addCategory("android.intent.category.LAUNCHER");
+                        i.setData(Uri.parse(url));
+                        activity.startActivity(i);
+                    }
+                    catch(ActivityNotFoundException e) {
+                        // Chrome is not installed
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        activity.startActivity(i);
+                    }
+                }
             }
         });
     }

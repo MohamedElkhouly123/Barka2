@@ -143,7 +143,7 @@
             android:id="@+id/cardview_flight_offers_item_ofer_presedge_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OFF"
+            android:text=""
             android:layout_marginTop="@dimen/_10sdp"
             android:textSize="@dimen/_10ssp"
             android:textColor="@color/white"

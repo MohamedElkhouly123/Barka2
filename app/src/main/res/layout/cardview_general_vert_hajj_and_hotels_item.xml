@@ -107,9 +107,10 @@
         <TextView
             android:id="@+id/cardview_general_vert_hajj_and_hotels_item_nights_tv"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:gravity="center_vertical"
             android:text="@string/night"
             android:visibility="visible"
             android:textColor="@color/gray_text_color" />
@@ -118,6 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_2sdp"
             android:gravity="center"
             android:visibility="visible"
@@ -126,8 +128,8 @@
                 android:id="@+id/cardview_general_vert_hajj_and_hotels_item_from_date_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_7sdp"
-                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
                 android:textSize="@dimen/_11ssp"
                 android:text="13 sep"
                 android:textColor="@color/graydate" />
@@ -142,8 +144,7 @@
                 android:id="@+id/cardview_general_vert_hajj_and_hotels_item_to_date_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_7sdp"
-                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_5sdp"
                 android:textSize="@dimen/_11ssp"
                 android:text="19 sep"
                 android:textColor="@color/graydate" />

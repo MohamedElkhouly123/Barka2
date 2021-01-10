@@ -32,22 +32,31 @@ public class GeneralHajjDescriptionDetailsDialog {
 
         TextView descriptionTv = (TextView) dialog.findViewById(R.id.dialog_general_hajj_details_description_tv);
         ImageView detailsCloseBtn = (ImageView) dialog.findViewById(R.id.dialog_general_hajj_details_description_cancel_btn);
-        if(btnName.equalsIgnoreCase("makka")){
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption(), Html.FROM_HTML_MODE_COMPACT));
-            } else {
-                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()));
-            }
-//        descriptionTv.setText(Html.fromHtml(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()).toString()));
-//            descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmarhDetails().getImportantNotes(), Html.FROM_HTML_MODE_LEGACY));
-
-        }
-        if(btnName.equalsIgnoreCase("madina")){
+//        if(btnName.equalsIgnoreCase("makka")){
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption(), Html.FROM_HTML_MODE_COMPACT));
+//            } else {
+//                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()));
+//            }
+////        descriptionTv.setText(Html.fromHtml(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()).toString()));
+////            descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmarhDetails().getImportantNotes(), Html.FROM_HTML_MODE_LEGACY));
+//
+//        }
+//        if(btnName.equalsIgnoreCase("madina")){
+////            descriptionTv.setText(Html.fromHtml(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption()).toString()));
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption(), Html.FROM_HTML_MODE_COMPACT));
+//            } else {
+//                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption()));
+//            }
+//        }
+        if(btnName.equalsIgnoreCase("makamadina")){
 //            descriptionTv.setText(Html.fromHtml(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption()).toString()));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption(), Html.FROM_HTML_MODE_COMPACT));
+                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()+"\n\n\n\n\n\n\n\n"+getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption(), Html.FROM_HTML_MODE_COMPACT));
             } else {
-                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption()));
+                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()+"\n\n\n\n\n\n\n\n"
+                        +getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption()));
             }
         }
         if(btnName.equalsIgnoreCase("manasik")){

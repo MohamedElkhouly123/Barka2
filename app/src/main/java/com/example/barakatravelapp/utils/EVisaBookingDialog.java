@@ -83,9 +83,9 @@ public class EVisaBookingDialog {
 
     private void setData(BookEvisaResponce bookEvisaResponce) {
         country_type.setText(bookEvisaResponce.getCountryType()+" fees  :");
-        countryTypePrice.setText(bookEvisaResponce.getTotal().toString()+" $");
-        servicesFees.setText(bookEvisaResponce.getFees().toString()+" $");
-        totalPrice.setText(bookEvisaResponce.getTotalAmount().toString()+" $");
+        countryTypePrice.setText("$ "+bookEvisaResponce.getTotal().toString());
+        servicesFees.setText("$ "+bookEvisaResponce.getFees().toString());
+        totalPrice.setText("$ "+bookEvisaResponce.getTotalAmount().toString());
 
     }
 

@@ -314,21 +314,6 @@
             android:layout_marginTop="@dimen/_8sdp"
             android:orientation="horizontal"
             android:weightSum="2">
-
-            <Button
-                android:id="@+id/fragment_luxury_umrah_package_makka_details_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:textSize="@dimen/_9ssp"
-                android:background="@drawable/buttonstyl_blue"
-                android:text="@string/makkah"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-
-                />
             <Button
                 android:id="@+id/fragment_luxury_umrah_package_madina_details_btn"
                 android:layout_width="match_parent"
@@ -338,11 +323,39 @@
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:textSize="@dimen/_9ssp"
                 android:background="@drawable/buttonstyl_blue"
-                android:text="@string/madinah"
+                android:text="@string/makamadinah"
                 android:textColor="@color/white"
                 android:textStyle="bold"
 
                 />
+<!--            <Button-->
+<!--                android:id="@+id/fragment_luxury_umrah_package_makka_details_btn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginStart="@dimen/_8sdp"-->
+<!--                android:layout_marginEnd="@dimen/_5sdp"-->
+<!--                android:textSize="@dimen/_9ssp"-->
+<!--                android:background="@drawable/buttonstyl_blue"-->
+<!--                android:text="@string/makkah"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textStyle="bold"-->
+
+<!--                />-->
+<!--            <Button-->
+<!--                android:id="@+id/fragment_luxury_umrah_package_madina_details_btn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginStart="@dimen/_5sdp"-->
+<!--                android:layout_marginEnd="@dimen/_8sdp"-->
+<!--                android:textSize="@dimen/_9ssp"-->
+<!--                android:background="@drawable/buttonstyl_blue"-->
+<!--                android:text="@string/madinah"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textStyle="bold"-->
+
+<!--                />-->
         </LinearLayout>
             <LinearLayout
                 android:id="@+id/hajj_hide_part_ly"

@@ -77,7 +77,7 @@ public class GetBookingsFlightsItemsAdapter extends RecyclerView.Adapter<GetBook
         holder.cardviewBookFlightOffersItemFlightNameTv.setText("Flight Name : " +flightList.getFlightName());
         holder.cardviewBookFlightOffersItemPlacesCoveredTv.setText("Places Covered : " + flightList.getFrom() + " To " + flightList.getTo());
         holder.cardviewBookFlightOffersItemFromToDateTv.setText("Reservation From : " + flightList.getReservationFrom() + " To " + flightList.getReservationTo());
-        holder.cardviewBookFlightOffersItemPriceTv.setText("Price : " +flightsListData.get(position).getTotalPrice());
+        holder.cardviewBookFlightOffersItemPriceTv.setText("Price : $ " +flightsListData.get(position).getTotalPrice());
         int totalMembers =flightsListData.get(position).getNumOfAdults()+flightsListData.get(position).getNumOfChild();
         holder.cardviewBookFlightOffersItemTotalMembersTv.setText("Total Members : " +totalMembers+" ( Adult:"+flightsListData.get(position).getNumOfAdults()+" , Children:"+flightsListData.get(position).getNumOfChild()+" )");
 //        holder.cardviewBookFlightOffersItemFlightNameTv.setText("Flight Name : " +flightList.getFlightName());

@@ -138,7 +138,7 @@ public class LuxuryUmrahPackageFragment extends BaSeFragment implements PhotoGal
         fragmentLuxuryUmrahPackageFromDateTv.setText(getTopUmarAndTophajjPackage.getUmar().getStartDateInformat());
         fragmentLuxuryUmrahPackageToDateTv.setText(getTopUmarAndTophajjPackage.getUmar().getEndDateInformat());
         fragmentLuxuryUmrahPackageDurationTv.setText(getTopUmarAndTophajjPackage.getUmar().getDuration().toString());
-        fragmentLuxuryUmrahPackagePriceTv.setText(getTopUmarAndTophajjPackage.getUmar().getMinPrice().toString());
+        fragmentLuxuryUmrahPackagePriceTv.setText("$ "+getTopUmarAndTophajjPackage.getUmar().getMinPrice().toString());
         fragmentLuxuryUmrahPackageRateTv.setText(getTopUmarAndTophajjPackage.getUmar().getCalRate().toString());
         if (getTopUmarAndTophajjPackage.getUmar().getPackageType().equalsIgnoreCase("hajj") || isDiscoverOrHajjOrUmarah.equalsIgnoreCase("hajj")) {
             hajjHidePartLy.setVisibility(View.VISIBLE);
@@ -258,7 +258,7 @@ public class LuxuryUmrahPackageFragment extends BaSeFragment implements PhotoGal
 //        homeCycleActivity.bottomNavView.getMenu().getItem(0).setChecked(true);
     }
 
-    @OnClick({R.id.fragment_luxury_umrah_package_back_btn, R.id.fragment_luxury_umrah_package_makka_details_btn, R.id.fragment_luxury_umrah_package_madina_details_btn, R.id.fragment_luxury_umrah_package_manasik_details_btn, R.id.fragment_luxury_umrah_package_air_details_btn, R.id.fragment_luxury_umrah_package_day_by_day_btn, R.id.fragment_luxury_umrah_package_included_btn, R.id.fragment_luxury_umrah_package_not_included_btn, R.id.fragment_luxury_umrah_package_important_nots_btn, R.id.fragment_luxury_umrah_package_how_to_book_btn, R.id.fragment_luxury_umrah_package_write_your_rating_here_btn})
+    @OnClick({R.id.fragment_luxury_umrah_package_back_btn, R.id.fragment_luxury_umrah_package_madina_details_btn, R.id.fragment_luxury_umrah_package_manasik_details_btn, R.id.fragment_luxury_umrah_package_air_details_btn, R.id.fragment_luxury_umrah_package_day_by_day_btn, R.id.fragment_luxury_umrah_package_included_btn, R.id.fragment_luxury_umrah_package_not_included_btn, R.id.fragment_luxury_umrah_package_important_nots_btn, R.id.fragment_luxury_umrah_package_how_to_book_btn, R.id.fragment_luxury_umrah_package_write_your_rating_here_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.fragment_luxury_umrah_package_back_btn:
@@ -266,11 +266,14 @@ public class LuxuryUmrahPackageFragment extends BaSeFragment implements PhotoGal
 //                navController.navigate(R.id.action_luxuryUmrahPackageFragment_to_navigation_discover);
 //                homeCycleActivity.setNavigation("v");
                 break;
-            case R.id.fragment_luxury_umrah_package_makka_details_btn:
-                new GeneralHajjDescriptionDetailsDialog().showDialog(getActivity(), getTopUmarAndTophajjPackage, "makka");
-                break;
+//            case R.id.fragment_luxury_umrah_package_makka_details_btn:
+//                new GeneralHajjDescriptionDetailsDialog().showDialog(getActivity(), getTopUmarAndTophajjPackage, "makka");
+//                break;
+//            case R.id.fragment_luxury_umrah_package_madina_details_btn:
+//                new GeneralHajjDescriptionDetailsDialog().showDialog(getActivity(), getTopUmarAndTophajjPackage, "madina");
+//                break;
             case R.id.fragment_luxury_umrah_package_madina_details_btn:
-                new GeneralHajjDescriptionDetailsDialog().showDialog(getActivity(), getTopUmarAndTophajjPackage, "madina");
+                new GeneralHajjDescriptionDetailsDialog().showDialog(getActivity(), getTopUmarAndTophajjPackage, "makamadina");
                 break;
             case R.id.fragment_luxury_umrah_package_manasik_details_btn:
                 new GeneralHajjDescriptionDetailsDialog().showDialog(getActivity(), getTopUmarAndTophajjPackage, "manasik");

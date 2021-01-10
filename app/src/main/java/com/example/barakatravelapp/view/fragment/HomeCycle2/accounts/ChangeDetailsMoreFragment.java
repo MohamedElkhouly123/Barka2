@@ -1,8 +1,11 @@
 package com.example.barakatravelapp.view.fragment.HomeCycle2.accounts;
 
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -104,6 +107,19 @@ public class ChangeDetailsMoreFragment extends BaSeFragment {
                 }
                 break;
             case R.id.fragment_change_more_details_rate_app_btn:
+                String url ="https://play.google.com/store/apps/details?id=com.barkatravel.usbarakatravelapp";
+                try {
+                    Intent i = new Intent("android.intent.action.MAIN");
+                    i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                    i.addCategory("android.intent.category.LAUNCHER");
+                    i.setData(Uri.parse(url));
+                    getActivity().startActivity(i);
+                }
+                catch(ActivityNotFoundException e) {
+                    // Chrome is not installed
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    getActivity().startActivity(i);
+                }
                 break;
             case R.id.fragment_change_more_terms_condation_btn:
                 if (checkResponceReturn){
