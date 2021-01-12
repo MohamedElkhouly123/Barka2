@@ -193,7 +193,7 @@ private void onValidation() {
 
 
             clientCall = getApiClient().onSignUp(firstName,lastName,phone , email, password);
-            viewModelUser.setAndMakeResetAndNewPasswordResponseAndSignUpAndBooking(getActivity(), clientCall, "Succes Register", true);
+            viewModelUser.setAndMakeResetAndNewPasswordResponseAndSignUpAndBooking(getActivity(), clientCall, "Success Register", true);
 
 
 
