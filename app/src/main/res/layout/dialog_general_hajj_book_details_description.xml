@@ -37,6 +37,29 @@
             android:layout_marginEnd="@dimen/_5sdp"
             android:textColor="@color/black"
             android:textSize="@dimen/_12ssp" />
+        <LinearLayout
+            android:id="@+id/dialog_general_hajj_details_description_show_part_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            >
+        <ImageView
+            style="@style/view_style"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            />
+        <TextView
+            android:id="@+id/dialog_general_hajj_details_description2_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
     </LinearLayout>
     </ScrollView>
 </LinearLayout>

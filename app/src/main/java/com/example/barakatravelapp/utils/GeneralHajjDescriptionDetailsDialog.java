@@ -9,6 +9,7 @@ import android.text.Html;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.barakatravelapp.R;
@@ -18,6 +19,7 @@ import com.example.barakatravelapp.data.model.getUmrahAndHujjResponce.GetTopUmar
 public class GeneralHajjDescriptionDetailsDialog {
     private static int adultNum;
     private DialogAdapterCallback dialogAdapterCallback;
+    private LinearLayout descriptionHidePart;
 
     public void showDialog(final Activity activity, GetTopUmarAndTophajjPackage getTopUmarAndTophajjPackage, String btnName) {
         final Dialog dialog = new Dialog(activity);
@@ -31,6 +33,8 @@ public class GeneralHajjDescriptionDetailsDialog {
         adultNum=0;
 
         TextView descriptionTv = (TextView) dialog.findViewById(R.id.dialog_general_hajj_details_description_tv);
+        TextView description2Tv = (TextView) dialog.findViewById(R.id.dialog_general_hajj_details_description2_tv);
+        descriptionHidePart = (LinearLayout) dialog.findViewById(R.id.dialog_general_hajj_details_description_show_part_ly);
         ImageView detailsCloseBtn = (ImageView) dialog.findViewById(R.id.dialog_general_hajj_details_description_cancel_btn);
 //        if(btnName.equalsIgnoreCase("makka")){
 //            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -51,12 +55,15 @@ public class GeneralHajjDescriptionDetailsDialog {
 //            }
 //        }
         if(btnName.equalsIgnoreCase("makamadina")){
+            descriptionHidePart.setVisibility(View.VISIBLE);
 //            descriptionTv.setText(Html.fromHtml(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption()).toString()));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()+"\n\n\n\n\n\n\n\n"+getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption(), Html.FROM_HTML_MODE_COMPACT));
+                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption(), Html.FROM_HTML_MODE_COMPACT));
+                description2Tv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption(), Html.FROM_HTML_MODE_COMPACT));
+
             } else {
-                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()+"\n\n\n\n\n\n\n\n"
-                        +getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption()));
+                descriptionTv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMadinaDesciption()));
+                description2Tv.setText(Html.fromHtml(getTopUmarAndTophajjPackage.getUmar().getMakkahDesciption()));
             }
         }
         if(btnName.equalsIgnoreCase("manasik")){
